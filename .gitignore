@@ -1,0 +1,6 @@
+# VS Code settings
+.vscode/
+
+# College testing files
+test_saved/
+thoni.py

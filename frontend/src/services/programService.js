@@ -1,0 +1,30 @@
+import api from './api';
+
+const programService = {
+  getAll: async (params) => {
+    const response = await api.get('/programs', { params });
+    return response.data;
+  },
+
+  getById: async (id) => {
+    const response = await api.get(`/programs/${id}`);
+    return response.data;
+  },
+
+  create: async (programData) => {
+    const response = await api.post('/programs', programData);
+    return response.data;
+  },
+
+  update: async (id, programData) => {
+    const response = await api.put(`/programs/${id}`, programData);
+    return response.data;
+  },
+
+  delete: async (id) => {
+    const response = await api.delete(`/programs/${id}`);
+    return response.data;
+  }
+};
+
+export default programService;
